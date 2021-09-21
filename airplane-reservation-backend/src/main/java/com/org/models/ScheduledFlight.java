@@ -31,7 +31,7 @@ public class ScheduledFlight {
 	public ScheduledFlight() {
 	}
 	
-	public ScheduledFlight(BigInteger scheduleFlightId, com.org.model.Flight flight, Integer availableSeats,
+	public ScheduledFlight(BigInteger scheduleFlightId, com.org.models.Flight flight, Integer availableSeats,
 			Schedule schedule) {
 		super();
 		this.scheduleFlightId = scheduleFlightId;
@@ -123,4 +123,3 @@ public class ScheduledFlight {
 
 }
 
-}
