@@ -53,6 +53,19 @@ public class Passenger {
 		this.luggage = luggage;
 	}
 
+	public Passenger(BigInteger passengerNumber, String passengerName, int passengerAge, BigInteger passengerUIN,
+			Double luggage) {
+		super();
+		this.passengerNumber = passengerNumber;
+		this.passengerName = passengerName;
+		this.passengerAge = passengerAge;
+		this.passengerUIN = passengerUIN;
+		this.luggage = luggage;
+	}
+	
+	public Passenger() {
+		
+	}
 }
 
 

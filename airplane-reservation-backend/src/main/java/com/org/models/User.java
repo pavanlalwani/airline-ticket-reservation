@@ -63,5 +63,8 @@ public class User {
 		this.contact_no = contact_no;
 		this.email = email;
 	}
+	public User() {
+		
+	}
 	
 }

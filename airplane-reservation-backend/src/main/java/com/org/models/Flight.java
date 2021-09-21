@@ -13,6 +13,10 @@ public class Flight {
 	private String flightModel;
 	private int seatCapacity;
 	
+	public Flight() {
+		
+	}
+	
 	public BigInteger getFlightNo() {
 		return flightNo;
 	}

@@ -6,6 +6,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Booking {
+	
 	@Id
 	// @GeneratedValue(strategy=GenerationType.AUTO)
 	private BigInteger bookingId;
