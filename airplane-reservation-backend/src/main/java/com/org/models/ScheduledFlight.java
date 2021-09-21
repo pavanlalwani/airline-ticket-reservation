@@ -11,7 +11,7 @@ import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 
 @Entity
-public class ScheduledFlights {
+public class ScheduledFlight {
 	@Id
 	@Column(name = "schedule_flight_id")
 	private BigInteger scheduleFlightId;
