@@ -3,8 +3,10 @@ package com.org.models;
 import java.math.BigInteger;
 import java.util.Objects;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
 
+@Entity
 public class Flight {
 
 	@Id
