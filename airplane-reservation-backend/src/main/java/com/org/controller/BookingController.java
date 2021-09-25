@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.org.exceptions.RecordAlreadyPresentException;
 import com.org.exceptions.RecordNotFoundException;
-import com.org.model.Booking;
+import com.org.models.Booking;
 import com.org.service.BookingService;
 
 @CrossOrigin("http://localhost:4200")
