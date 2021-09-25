@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import com.org.models.User;
 
 @Repository
-public interface UserDao extends CrudRepository<User, BigInteger> {
+public interface UserDao extends CrudRepository<User, Long> {
 
 }
