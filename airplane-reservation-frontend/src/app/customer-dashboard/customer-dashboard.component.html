@@ -1,0 +1,39 @@
+<style>
+    #box{
+      width: 50%;
+      height: 50%;
+    }
+    #opacity-3 {
+    opacity:0.6!important;
+  }
+  
+  </style>
+  <nav class="navbar navbar-dark ">
+      <!-- <div class="navbar-brand">
+        <img src="assets/aeroplane.png" width="40" height="40" class="d-inline-block align-top" alt="">
+        <b>Airline Ticket Reservation System</b>
+      </div> -->
+      <!-- <button type = "button" class ="btn btn-danger pull-right">LOGOUT</button> -->
+    </nav>
+    <div style="padding: 50px;" class="d-flex align-items-center justify-content-center">
+       <div class="shadow-lg p-3 mb-5 bg-dark rounded" id="box" style="opacity: 1;">   
+        <div class="container">
+          <div class="row justify-content-center">
+              <h2  class="font-weight-bold" style="color: white">Welcome!!</h2>
+          </div>
+        </div><br>
+        <div class="container">
+          <div class="content-center">
+              <div class="row">
+                  <div class="col-sm-12" style="text-align: center;">
+                  <button type = "button" class = "btn btn-light" (click)="createBooking()">New Booking</button><br><br>
+                  <button type = "button" class = "btn btn-light" (click)="readAllBooking()">View Bookings</button><br><br> 
+                  <button type = "button" class = "btn btn-light" (click)="viewScheduledFlight()">View Scheduled Flights</button><br><br> 
+                  <button type = "button" class = "btn btn-light" (click)="viewAirport()">View Available Airports</button><br><br>                 
+                </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  </div>
+    

@@ -12,6 +12,7 @@ import com.org.dao.BookingDao;
 import com.org.exceptions.RecordAlreadyPresentException;
 import com.org.exceptions.RecordNotFoundException;
 import com.org.models.Booking;
+import com.org.models.Flight;
 
 @Service
 public class BookingServiceImpl implements BookingService {
@@ -82,5 +83,13 @@ public class BookingServiceImpl implements BookingService {
 		} catch (RecordNotFoundException e) {
 			return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
 		}
+	}
+	
+	public Booking viewBooking(BigInteger bookingId) {
+		Optional<Booking> findById = bookingDao.findById(bookingId);
+		if (findById.isPresent()) {
+			return findById.get();
+		} else
+			throw new RecordNotFoundException("Booking with number: " + bookingId + " not exists");
 	}
 }

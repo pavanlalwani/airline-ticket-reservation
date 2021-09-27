@@ -5,6 +5,7 @@ import java.math.BigInteger;
 import org.springframework.http.ResponseEntity;
 
 import com.org.models.Booking;
+import com.org.models.Flight;
 
 public interface BookingService {
 
@@ -17,4 +18,6 @@ public interface BookingService {
 	public Iterable<Booking> displayAllBooking();
 
 	public ResponseEntity<?> findBookingById(BigInteger bookingId);
+	
+	public Booking viewBooking(BigInteger bookingId);
 }

@@ -1,0 +1,12 @@
+.heading {
+    margin-left: 10%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    font-size: large;
+    font-weight: bold;
+  }
+
+  .date{
+    display: flex;
+    flex-direction: column;
+  }

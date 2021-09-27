@@ -56,6 +56,11 @@ public class BookingController {
 
 		return bookingService.findBookingById(bookingId);
 	}
+	
+	@RequestMapping("/viewBooking/{id}")
+	public Booking viewBooking(@PathVariable("id") BigInteger bookingId) {
+		return bookingService.viewBooking(bookingId);
+	}
 
 	@DeleteMapping("/deleteBooking/{id}")
 	@ExceptionHandler(RecordNotFoundException.class)

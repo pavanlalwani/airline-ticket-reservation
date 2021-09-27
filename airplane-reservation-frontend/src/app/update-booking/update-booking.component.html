@@ -1,0 +1,34 @@
+<div class="heading">Update Booking</div>
+  <div style="width: 500px; margin: auto;">
+    <form (ngSubmit)="onSubmit()">  
+      <div class="form-group">
+        <label for="name">Booking ID</label>
+        <input type="text" class="form-control" id="bookingId" required [(ngModel)]="booking.bookingId" name="bookingId">
+      </div>
+      <div class="d-flex justify-content-between" style="width: 500px">
+        <div class="form-group">
+          <label for="name">Source</label>
+          <input type="text" class="form-control" id="sourceAirport" required [(ngModel)]="booking.sourceAirport" name="sourceAirport">
+        </div>
+        <div>
+          <label for="name">Destination</label>
+          <input type="text" class="form-control" id="destinationAirport" required [(ngModel)]="booking.destinationAirport" name="destinationAirport">
+        </div>
+      </div>
+  
+        <div class="table" style="width: 45%">
+          <label for="name">Depart Date</label>
+          <input type="date" class="form-control" id="departDate" required [(ngModel)]="booking.departDate" name="departDate">
+          <div class="label" id="depart"></div>
+        </div>
+  
+      <div class="form-group">
+        <label for="name">No of Passengers</label>
+        <input type="number" class="form-control" id="noOfPassengers" required [(ngModel)]="booking.noOfPassengers"
+          name="noOfPassengers" [ngModelOptions]="{standalone: true}">
+      </div>
+  
+      <button type="submit" class="btn btn-success">Update</button>
+    </form>
+  
+</div>

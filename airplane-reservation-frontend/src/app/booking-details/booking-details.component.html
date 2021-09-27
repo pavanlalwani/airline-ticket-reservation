@@ -1,0 +1,24 @@
+<h2>Booking Details</h2>
+
+<hr/>
+<div *ngIf="booking">
+  <div>
+    <label><b>Booking ID:</b></label> {{booking.bookingId}}
+  </div>
+  <div>
+    <label><b>Source Airport: </b></label> {{booking.sourceAirport}}
+  </div>
+  <div>
+    <label><b>Destination Airport: </b></label> {{booking.destinationAirport}}
+  </div>
+  <div>
+    <label><b>Depart Date: </b></label> {{booking.departDate}}
+  </div>
+  <div>
+    <label><b>No of Passengers: </b></label> {{booking.noOfPassengers}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Booking List</button><br>
