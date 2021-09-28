@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.org.exceptions.RecordAlreadyPresentException;
 import com.org.exceptions.RecordNotFoundException;
-import com.org.models.Booking;
+import com.org.model.Booking;
 import com.org.service.BookingService;
 
 @CrossOrigin("http://localhost:4200")
@@ -52,19 +52,14 @@ public class BookingController {
 
 	@GetMapping("/searchBooking/{id}")
 	@ExceptionHandler(RecordNotFoundException.class)
-	public ResponseEntity<?> searchBookingByID(@PathVariable("id") BigInteger bookingId) {
+	public ResponseEntity<?> searchBookingByID(@PathVariable("id") Long bookingId) {
 
 		return bookingService.findBookingById(bookingId);
-	}
-	
-	@RequestMapping("/viewBooking/{id}")
-	public Booking viewBooking(@PathVariable("id") BigInteger bookingId) {
-		return bookingService.viewBooking(bookingId);
 	}
 
 	@DeleteMapping("/deleteBooking/{id}")
 	@ExceptionHandler(RecordNotFoundException.class)
-	public void deleteBookingByID(@PathVariable("id") BigInteger bookingId) {
+	public void deleteBookingByID(@PathVariable("id") Long bookingId) {
 
 		bookingService.deleteBooking(bookingId);
 	}

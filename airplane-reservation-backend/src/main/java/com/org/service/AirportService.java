@@ -1,6 +1,6 @@
 package com.org.service;
 
-import com.org.models.Airport;
+import com.org.model.Airport;
 
 public interface AirportService {
 	public Iterable<Airport> viewAllAirport();

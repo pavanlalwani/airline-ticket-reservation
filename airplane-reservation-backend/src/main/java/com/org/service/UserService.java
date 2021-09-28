@@ -1,8 +1,10 @@
 package com.org.service;
 
+import java.math.BigInteger;
+
 import org.springframework.http.ResponseEntity;
 
-import com.org.models.User;
+import com.org.model.User;
 
 public interface UserService {
 

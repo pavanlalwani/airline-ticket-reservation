@@ -1,22 +1,19 @@
 package com.org.service;
 
+import com.org.exceptions.*;
 import java.math.BigInteger;
 import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import com.org.dao.FlightDao;
-import com.org.exceptions.RecordAlreadyPresentException;
-import com.org.exceptions.RecordNotFoundException;
-import com.org.models.Flight;
+import com.org.model.Flight;
 
 @Service
 public class FlightServiceImpl implements FlightService {
 	@Autowired
 	FlightDao flightDao;
-
-
 	public void addFlight(Flight flight) {
 		Optional<Flight> findById = flightDao.findById(flight.getFlightNo());
 		if (!findById.isPresent()) {

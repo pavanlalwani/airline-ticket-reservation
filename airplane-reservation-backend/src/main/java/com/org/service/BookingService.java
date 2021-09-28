@@ -4,8 +4,7 @@ import java.math.BigInteger;
 
 import org.springframework.http.ResponseEntity;
 
-import com.org.models.Booking;
-import com.org.models.Flight;
+import com.org.model.Booking;
 
 public interface BookingService {
 
@@ -13,11 +12,9 @@ public interface BookingService {
 
 	public Booking updateBooking(Booking newBooking);
 
-	public String deleteBooking(BigInteger bookingId);
+	public String deleteBooking(Long bookingId);
 
 	public Iterable<Booking> displayAllBooking();
 
-	public ResponseEntity<?> findBookingById(BigInteger bookingId);
-	
-	public Booking viewBooking(BigInteger bookingId);
+	public ResponseEntity<?> findBookingById(Long bookingId);
 }
