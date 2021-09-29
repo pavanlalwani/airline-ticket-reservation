@@ -2,7 +2,7 @@ package com.org.service;
 
 import java.math.BigInteger;
 
-import com.org.models.Flight;
+import com.org.model.Flight;
 
 public interface FlightService {
 	public void addFlight(Flight flight);

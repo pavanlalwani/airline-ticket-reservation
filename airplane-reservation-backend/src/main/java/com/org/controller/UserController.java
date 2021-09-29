@@ -1,9 +1,12 @@
 package com.org.controller;
 
+import java.util.Set;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,11 +19,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.org.exceptions.RecordAlreadyPresentException;
 import com.org.exceptions.RecordNotFoundException;
-import com.org.models.User;
+import com.org.model.User;
 import com.org.service.UserService;
 
-//@CrossOrigin("http://localhost:4200")
-//@ComponentScan(basePackages = "com")
+@ComponentScan(basePackages = "com")
 @RestController
 @RequestMapping("/user")
 public class UserController {

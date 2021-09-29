@@ -3,7 +3,9 @@ package com.org.controller;
 import java.math.BigInteger;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -11,9 +13,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.org.models.Flight;
+import com.org.exceptions.RecordNotFoundException;
+import com.org.model.Booking;
+import com.org.model.Flight;
 import com.org.service.FlightService;
-
+import com.org.service.FlightServiceImpl;
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/flight")
 public class FlightController {

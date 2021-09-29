@@ -2,9 +2,10 @@ package com.org.service;
 
 import java.math.BigInteger;
 
+
 import com.org.exceptions.RecordNotFoundException;
 import com.org.exceptions.ScheduledFlightNotFoundException;
-import com.org.models.ScheduledFlight;
+import com.org.model.ScheduledFlight;
 
 public interface ScheduledFlightService {
 	public ScheduledFlight addScheduledFlight(ScheduledFlight scheduledFlight);

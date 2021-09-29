@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import com.org.dao.UserDao;
 import com.org.exceptions.RecordAlreadyPresentException;
 import com.org.exceptions.RecordNotFoundException;
-import com.org.models.User;
+import com.org.model.User;
 
 @Service
 public class UserServiceImpl implements UserService {

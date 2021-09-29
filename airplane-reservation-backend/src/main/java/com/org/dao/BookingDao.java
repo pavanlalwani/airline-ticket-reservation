@@ -5,9 +5,9 @@ import java.math.BigInteger;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.org.models.Booking;
+import com.org.model.Booking;
 
 @Repository
-public interface BookingDao extends CrudRepository<Booking, BigInteger> {
+public interface BookingDao extends CrudRepository<Booking, Long> {
 
 }
