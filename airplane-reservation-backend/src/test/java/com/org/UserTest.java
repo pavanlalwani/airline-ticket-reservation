@@ -14,7 +14,7 @@ import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.org.dao.UserDao;
-import com.org.models.User;
+import com.org.model.User;
 import com.org.service.UserService;
 
 @SpringBootTest
