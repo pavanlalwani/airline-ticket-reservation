@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 import java.math.BigInteger;
+import java.util.Optional;
 import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
@@ -32,11 +33,15 @@ public class AddFlightDetailsTest {
 		
 		Flight flightObj = new Flight(BigInteger.valueOf(657),
 				"Indigo","A330", 260);
-		when(dao.save(flightObj)).thenReturn(flightObj);
-		flightService.addFlight(flightObj);
-		Iterable<Flight> flightitr = flightService.viewAllFlight();
-		String flightobj2 = flightitr.toString();
 		
-		assertEquals(flightObj.toString(), flightobj2);
+		
+	
+		flightService.addFlight(flightObj);
+		when(dao.save(flightObj)).thenReturn(flightObj);
+		Optional<Flight> f =  dao.findById(BigInteger.valueOf(657));
+		//Flight flightitr = flightService.viewFlight(BigInteger.valueOf(657));
+		//String flightobj2 = flightitr.toString();
+		
+		assertEquals(flightObj.equals(f), f.equals(flightObj));
 	}
 }
