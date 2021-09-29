@@ -11,10 +11,10 @@ import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.org.models.Airport;
-import com.org.models.Flight;
-import com.org.models.Schedule;
-import com.org.models.ScheduledFlight;
+import com.org.model.Airport;
+import com.org.model.Flight;
+import com.org.model.Schedule;
+import com.org.model.ScheduledFlight;
 
 @SpringBootTest
 public class ScheduledFlightTest {
