@@ -12,8 +12,8 @@ import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 export class CreateBookingComponent implements OnInit {
   // model: NgbDateStruct;
 
-  booking: Booking = new Booking();
-  // bookingId = Math.floor((Math.random() * 100) + 1);
+  booking: Booking={"bookingId": null, "departDate":"", "sourceAirport":"", "destinationAirport": "","noOfPassengers": null};
+
   submitted = false;
   constructor(private bookingService: BookingService, private router: Router) { }
 

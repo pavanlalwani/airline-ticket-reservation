@@ -31,7 +31,11 @@ export class AddScheduledFlightComponent implements OnInit {
     this.dstnAirport=da;
     this.deptDateTime=ddt;
     this.arrDateTime=adt;
-    this.scheduleFlightService.addScheduleFlight( scheduleFlight,sa,da,ddt,adt).subscribe();
+    this.scheduleFlightService.addScheduleFlight( scheduleFlight,sa,da,ddt,adt)
+    .subscribe(data => {
+      console.log(data)
+      scheduleFlight = data;
+    }, error => console.log(error));
     alert("Schedule Flight added");
   }
 
@@ -60,6 +64,7 @@ export class AddScheduledFlightComponent implements OnInit {
   buttonFlag:boolean=false;
     enableButton(){
         this.buttonFlag=!this.idValid&&!this.airportValid;
+        // this.addScheduleFlight(scheduleFlight,a.value,b.value,c.value,d.value)
     }
 
     add(){

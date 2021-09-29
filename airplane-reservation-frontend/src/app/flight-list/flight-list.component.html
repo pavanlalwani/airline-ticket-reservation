@@ -1,3 +1,4 @@
+<app-header></app-header>
 <div class="panel panel-primary">
     <div class="panel-heading">
       <h2>List of Flights</h2>
@@ -19,7 +20,20 @@
             <td>{{flight.carrierName}}</td>
             <td>{{flight.flightModel}}</td>
             <td>{{flight.seatCapacity}}</td>
-            <td><button (click)="removeFlight(flight.flightNo)" class="btn btn-danger">Delete</button>
+            <td><button class="btn btn-danger" data-toggle="modal" data-target="#basicExampleModal">Delete</button>
+               <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body" style="margin: auto; margin-top: 5%;">
+                     <h3>Are You sure you want to delete the Flight?</h3>
+                     <div class="modalButtons">
+                     <button type="button" class="btn btn-info" (click)="removeFlight(flight.flightNo)" data-dismiss="modal" style="margin-right: 10px;">Yes</button> 
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    </div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
                 <button (click)="modifyFlight(flight.flightNo)" class="btn btn-info" style="margin-left: 10px">Update</button>
                 <button (click)="flightDetails(flight.flightNo)" class="btn btn-info" style="margin-left: 10px">Details</button>
             </td>

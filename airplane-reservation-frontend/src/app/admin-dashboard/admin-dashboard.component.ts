@@ -44,6 +44,13 @@ export class AdminDashboardComponent implements OnInit {
   viewAirport(): void{
     this.router.navigate(['airports']);
   }
+
+  addUser(): void{
+    this.router.navigate(['addUser']);
+  }
   
+  viewUsers(): void{
+    this.router.navigate(['users']);
+  }
 
 }

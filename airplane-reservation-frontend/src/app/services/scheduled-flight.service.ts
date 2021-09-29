@@ -26,6 +26,7 @@ export class ScheduledFlightService {
     console.log(scheduleFlight);
     console.log(params.toString());
    // console.log(form);
+   console.log({params})
     return this.http.post('http://localhost:8080/scheduledFlight/add?',form,{params});
   }
 

@@ -3,3 +3,8 @@
     margin: auto;
     background-color:rgb(247, 240, 240);
 }
+
+.modalButtons {
+    margin-left: 30%;
+    margin-bottom: 5%;
+}

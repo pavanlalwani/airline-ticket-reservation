@@ -18,8 +18,8 @@ export class UpdateBookingComponent implements OnInit {
 
   ngOnInit() {
     this.booking = new Booking();
-
-    this.bookingId = this.route.snapshot.params['bookingId'];
+    
+    this.bookingId=this.route.snapshot.params['id']
 
     this.bookingService.getBooking(this.bookingId)
     .subscribe(data => {

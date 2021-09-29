@@ -1,3 +1,4 @@
+<app-header></app-header>
 <div class="panel panel-primary">
     <div class="panel-heading">
       <h2>User List</h2>
@@ -7,23 +8,37 @@
         <thead class="thead-dark">
           <tr>
             <th>User Id</th>
-            <th>User Name</th>
-            <th>User Phone</th>
+            <th>Username</th>
+            <th>Phone Number</th>
             <th>User Email</th>
-            <th>User Type</th>
+            <!-- <th>User Type</th> -->
+            <th></th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let user of users | async">
-            <td>{{user.userId}}</td>
-            <td>{{user.userName}}</td>
+            <td>{{user.id}}</td>
+            <td>{{user.username}}</td>
             <td>{{user.userPhone}}</td>
-            <td>{{user.userEmail}}</td>
-            <td>{{user.roles}}</td>
+            <td>{{user.email}}</td>
+            <!-- <td>{{user.roles}}</td> -->
             <td>
-              <button (click)="deleteUser(user.userId)" class="btn btn-danger">Delete</button>
-              <button (click)="updateUser(user.userId)" class="btn btn-info" style="margin-left: 10px">Update</button>
-              <button (click)="userDetails(user.userId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+              <button class="btn btn-danger" data-toggle="modal" data-target="#basicExampleModal">Delete</button>
+               <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body" style="margin: auto; margin-top: 5%;">
+                     <h3>Are You sure you want to delete the Flight?</h3>
+                     <div class="modalButtons">
+                     <button type="button" class="btn btn-info" (click)="deleteUser(user.id)" data-dismiss="modal" style="margin-right: 10px;">Yes</button> 
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    </div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+              <button (click)="updateUser(user.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+              <button (click)="userDetails(user.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
             </td>
           </tr>
         </tbody>

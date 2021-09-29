@@ -16,7 +16,9 @@ export class UpdateFlightComponent implements OnInit {
 
   ngOnInit(){
     this.flight=new Flight();
+
     this.flightNo=this.route.snapshot.params['flightNo'];
+
     this.flightService.viewFlight(this.flightNo)
       .subscribe(data => {
         console.log(data)

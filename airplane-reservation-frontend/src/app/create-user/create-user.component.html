@@ -1,5 +1,7 @@
-<h3>Create Users</h3>
-<div [hidden]="submitted" style="width: 400px;">
+
+<app-header></app-header>
+<h2 class="head">Create Users</h2>
+<div [hidden]="submitted" style="width: 400px; margin-left: 35%;">
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="name">User Name</label>
@@ -23,13 +25,9 @@
 
       <div class="form-group">
         <label for="name">User Role</label>
-        <input type="text" class="form-control" id="userRole" required [(ngModel)]="user.roles" name="userRole">
+        <input type="text" class="form-control" id="roles" required [(ngModel)]="user.roles" name="roles">
       </div>
 
     <button type="submit" class="btn btn-success">Submit</button>
   </form>
-</div>
-
-<div [hidden]="!submitted">
-  <h4>You submitted successfully!</h4>
 </div>

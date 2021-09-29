@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class CreateUserComponent implements OnInit {
 
-  user: User = new User();
+  user = new User();
   submitted=false;
 
   constructor(private userService: UserService, private router: Router) { }
@@ -24,7 +24,10 @@ export class CreateUserComponent implements OnInit {
     }
 
     save(){
-      this.userService.createUser(this.user).subscribe(data => console.log(data), error => console.log(error));
+      console.log(this.user)
+      this.userService.signUp(this.user)
+      .subscribe(data => console.log(data),
+       error => console.log(error));
       this.user = new User();
       this.gotoList();
     }
@@ -35,7 +38,7 @@ export class CreateUserComponent implements OnInit {
     }
 
     gotoList(){
-      this.router.navigate(['/addUser']);
+      this.router.navigate(['/users']);
     }
 
 }

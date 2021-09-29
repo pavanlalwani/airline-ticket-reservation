@@ -16,7 +16,7 @@ export class LogoutComponent implements OnInit {
     this.authenticationService.logOut();
     sessionStorage.setItem('role', null);
     sessionStorage.setItem('userId', null);
-    this.router.navigate(['login']);
+    this.router.navigate(['home']);
   }
 
 }

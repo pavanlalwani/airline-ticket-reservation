@@ -12,7 +12,7 @@ import { ThrowStmt } from '@angular/compiler';
 export class LoginComponent implements OnInit {
   data = {};
   arr = {};
-  username = 'admin';
+  username = '';
   password = '';
   
   // user: User={"userId": 0, "username":"", "password":"", "userPhone": 0, "email":"", "active": null, "roles":""};
@@ -27,17 +27,6 @@ export class LoginComponent implements OnInit {
 
   // Check user for authenticatoin
   checkLogin() {
-    // if(this.loginservice.authenticate(this.username, this.password)) {
-    //   this.loginservice.getRole(this.username).subscribe((data: User)=> {
-    //     this.user = data;
-    //     this.redirect();
-    //   });
-      
-    // }
-    // else {
-    //   console.log("Invalid Login Credentials..");
-    //   this.invalidLogin = true;
-    // }
     this.loginservice.authenticate(this.username, this.password)
     .subscribe(
       userData => {
@@ -48,8 +37,7 @@ export class LoginComponent implements OnInit {
         this.user = userData;
         this.redirect();
         return userData;
-      }
-    );
+      }, error => alert("Invalid Username or Password"));
   }
 
   // Redirect based on the user role
@@ -58,17 +46,19 @@ export class LoginComponent implements OnInit {
       sessionStorage.setItem('role', 'customer');
       sessionStorage.setItem('userId', String(this.user.userId));
       this.invalidLogin = false;
-      this.router.navigate(["/customerDashboard"]).then(()=> {
-        window.location.reload();
-      });
+      this.router.navigate(["/customerDashboard"])
+      // .then(()=> {
+      //   window.location.reload();
+      // });
     }
     else if(this.user.roles[0] === "ROLE_ADMIN") {
       sessionStorage.setItem('role', 'admin');
       sessionStorage.setItem('userId', String(this.user.userId));
       this.invalidLogin = false;
-      this.router.navigate(["adminDashboard"]).then(()=> {
-        window.location.reload();
-      });
+      this.router.navigate(["adminDashboard"])
+      // .then(()=> {
+      //   window.location.reload();
+      // });
     }
   }
 

@@ -1,9 +1,8 @@
 <div class="wrapper">
   <div class="row">
       <div class="card col-md-4 offset-md-4 shadow-lg p-3 mb-5 bg-white">
-          <h3 style="margin-top: 20px; font-size: x-large;">Sign Up</h3>
-          <small>With an FRS account you can make bookings and manage
-              them quickly and easily.
+          <h3 style="margin-top: 20px; font-size: x-large; font-weight: 500;">Sign Up</h3>
+          <small>Create Your Account
           </small>
           <div class="row">
               User Name : <input (blur)="validateName(); enableButton();" class="form-control" type="text" name="username" [(ngModel)]="user.username">
@@ -24,9 +23,27 @@
               <small *ngIf="emailFlag" style="color: red;">Invalid Email</small>
           </div>
           <div class="row">
-              <button [disabled]="buttonFlag" class="regBtn btn btn-success" (click)="signUp()">
+              <button [disabled]="buttonFlag" class="regBtn btn btn-success" data-toggle="modal" data-target="#basicExampleModal">
                   Register
                 </button>
+
+                <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                         <h2>You have registered successfully!!</h2>
+                         <h4>Login to proceed</h4>
+                         <button type="button" class="btn btn btn-info" (click)="signUp()" data-dismiss="modal" >LOGIN</button> 
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
           </div>
       </div>
   </div>
