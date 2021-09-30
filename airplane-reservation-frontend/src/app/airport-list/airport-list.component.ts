@@ -27,6 +27,7 @@ export class AirportListComponent implements OnInit {
       data=>{
         console.log(data);
         this.reloadData();
+        alert("Airport deleted Successfully");
       },
       error => console.log(error));
   }

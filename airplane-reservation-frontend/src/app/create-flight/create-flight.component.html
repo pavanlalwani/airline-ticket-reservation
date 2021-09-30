@@ -1,5 +1,5 @@
 <app-header></app-header>
-<h3 style="text-align: center;">Add Flight</h3>
+<h2 style="text-align: center; font-weight: bold;">Add Flight</h2>
 <div [hidden]="submitted" style="width: 400px; margin-left: auto; margin-right: auto;">
   <form (ngSubmit)="onSubmit()">
     <!--<div class="form-group">
@@ -20,7 +20,7 @@
 
     <div class="form-group">
       <label for="name">Flight Model</label>
-      <input type="text" placeholder="Flight MOdel" #flightModel="ngModel" [class.is-invalid]="flightModel.invalid && flightModel.touched" class="form-control" id="flightModel" required [(ngModel)]="flight.flightModel" name="flightModel">
+      <input type="text" placeholder="Flight Model" #flightModel="ngModel" [class.is-invalid]="flightModel.invalid && flightModel.touched" class="form-control" id="flightModel" required [(ngModel)]="flight.flightModel" name="flightModel">
       <small class="text-danger" [class.d-none]="flightModel.valid || flightModel.untouched">Model is Required</small>
     </div>
     <div class="form-group">

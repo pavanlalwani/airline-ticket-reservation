@@ -23,17 +23,18 @@ export class ListUserComponent implements OnInit {
   }
 
   deleteUser(userId:number){
-    console.log(userId)
     this.userService.deleteUser(userId)
     .subscribe(
       data => {
         console.log(data);
         this.reloadData();
+        alert("User deleted Successfully");
       },
       error => console.log(error));
   }
 
   updateUser(userId: number){
+    console.log(userId)
     this.router.navigate(['updateUser',userId])
     .then(() => {
       window.location.reload();

@@ -22,10 +22,10 @@ export class HeaderComponent implements OnInit{
     ngOnInit(){
         this.user=false;
         this.admin=false;
-        if(sessionStorage.getItem('role')==='user'){
-            this.user=true;
-        }else if(sessionStorage.getItem('role')==='admin'){
+        if(sessionStorage.getItem('role')==='admin'){
             this.admin=true;
+        }else {
+            this.user=true;
         }
         // this.buttonFlag=this.authenticationService.isUserLoggedIn();
         this.username=sessionStorage.getItem('username');

@@ -18,7 +18,7 @@ export class UserService {
     return this.http.post('http://localhost:8080/api/auth/signup', user);
   }
 
-  updateUser(user: object): Observable<Object>{
+  updateUser(user: any): Observable<Object>{
     return this.http.put(`${this.baseUrl}/updateUser/`, user);
   }
 

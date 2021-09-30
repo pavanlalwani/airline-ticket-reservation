@@ -13,14 +13,13 @@ export class UpdateUserComponent implements OnInit {
   submitted: false;
   userId: number;
   user: User;
-
+  
   constructor(private route: ActivatedRoute, private router: Router, private userService: UserService) { }
 
   ngOnInit(): void {
     this.user = new User();
 
     this.userId = this.route.snapshot.params['id'];
-
     this.userService.getUser(this.userId)
     .subscribe(data => {
       console.log(data);

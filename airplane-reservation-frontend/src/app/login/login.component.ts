@@ -47,18 +47,12 @@ export class LoginComponent implements OnInit {
       sessionStorage.setItem('userId', String(this.user.userId));
       this.invalidLogin = false;
       this.router.navigate(["/customerDashboard"])
-      // .then(()=> {
-      //   window.location.reload();
-      // });
     }
     else if(this.user.roles[0] === "ROLE_ADMIN") {
       sessionStorage.setItem('role', 'admin');
       sessionStorage.setItem('userId', String(this.user.userId));
       this.invalidLogin = false;
       this.router.navigate(["adminDashboard"])
-      // .then(()=> {
-      //   window.location.reload();
-      // });
     }
   }
 

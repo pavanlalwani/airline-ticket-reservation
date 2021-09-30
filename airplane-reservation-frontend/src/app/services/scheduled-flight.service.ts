@@ -23,11 +23,12 @@ export class ScheduledFlightService {
     .set('dstnAirport', dstnAirport)
     .set('deptDateTime', deptDateTime)
     .set('arrDateTime', arrDateTime);
-    console.log(scheduleFlight);
+    console.log(scheduleFlight); 
     console.log(params.toString());
-   // console.log(form);
-   console.log({params})
-    return this.http.post('http://localhost:8080/scheduledFlight/add?',form,{params});
+   console.log(form);
+   console.log(params)
+    // return this.http.post('http://localhost:8080/scheduledFlight/add?',form,{params});
+    return this.http.post('http://localhost:8080/scheduledFlight/add',form, {params});
   }
 
   searchScheduledFlight(scheduledFlightId: number) {

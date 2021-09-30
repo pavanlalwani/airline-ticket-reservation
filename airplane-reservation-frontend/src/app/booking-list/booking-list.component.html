@@ -23,23 +23,9 @@
           <td>{{booking.departDate}}</td>
           <td>{{booking.noOfPassengers}}</td>
           <td>
-            <button class="btn btn-danger" data-toggle="modal" data-target="#basicExampleModal">Delete</button>
-            <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-body" style="margin: auto; margin-top: 5%;">
-                   <h3>Are You sure you want to delete the Booking?</h3>
-                   <div class="modalButtons">
-                   <button type="button" class="btn btn-info" (click)="deleteBooking(booking.bookingId)" data-dismiss="modal" style="margin-right: 10px;">Yes</button> 
-                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                  </div>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
+            <button (click)="deleteBooking(booking.bookingId)" class="btn btn-danger">Delete</button>
             <button (click)="updateBooking(booking.bookingId)" class="btn btn-info" style="margin-left: 10px">Update</button>
-            <button (click)="bookingDetails(booking.bookingId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            <!-- <button (click)="bookingDetails(booking.bookingId)" class="btn btn-info" style="margin-left: 10px">Details</button> -->
           </td>
         </tr>
       </tbody>

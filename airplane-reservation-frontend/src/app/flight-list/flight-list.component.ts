@@ -27,6 +27,7 @@ export class FlightListComponent implements OnInit {
       data=>{
         console.log(data);
         this.reloadData();
+        alert("Flight deleted Successfully");
       },
       error=> console.log(error));
   }

@@ -18,20 +18,7 @@
             <td>{{airport.airportCode}}</td>
             <td>{{airport.airportName}}</td>
             <td>{{airport.airportLocation}}</td>
-            <td><button class="btn btn-danger" data-toggle="modal" data-target="#basicExampleModal">Delete</button>
-               <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-body" style="margin: auto; margin-top: 5%;">
-                     <h3>Are You sure you want to delete the Airport?</h3>
-                     <div class="modalButtons">
-                     <button type="button" class="btn btn-info" (click)="removeAirport(airport.airportCode)" data-dismiss="modal" style="margin-right: 10px;">Yes</button> 
-                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    </div>
-                    </div>  
-                  </div>
-                </div>
-              </div>
+            <td><button (click)="removeAirport(airport.airportCode)" class="btn btn-danger" (click)="removeAirport(airport.airportCode)">Delete</button>
               <button (click)="modifyAirport(airport.airportCode)" class="btn btn-info" style="margin-left: 10px">update</button>
               <button (click)="airportDetails(airport.airportCode)" class="btn btn-info" style="margin-left: 10px">Details</button>
             </td>

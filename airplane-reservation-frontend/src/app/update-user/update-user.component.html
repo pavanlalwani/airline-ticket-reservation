@@ -4,12 +4,17 @@
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="name">User ID</label>
-      <input type="text" class="form-control" id="bookingId" required [(ngModel)]="user.userId" name="userId">
+      <input type="text" class="form-control" id="userId" required [(ngModel)]="user.userId" name="userId">
     </div>
 
     <div class="form-group">
-      <label for="name">UserName</label>
+      <label for="name">Username</label>
       <input type="text" class="form-control" id="username" required [(ngModel)]="user.username" name="username">
+    </div>
+
+    <div class="form-group">
+      <label for="name">UserEmail</label>
+      <input type="email" class="form-control" id="email" required [(ngModel)]="user.email" name="email">
     </div>
 
     <div class="form-group">
@@ -21,13 +26,6 @@
         <label for="name">UserPhone</label>
         <input type="text" class="form-control" id="userPhone" required [(ngModel)]="user.userPhone" name="userPhone">
       </div>
-
-      <div class="form-group">
-        <label for="name">UserEmail</label>
-        <input type="email" class="form-control" id="email" required [(ngModel)]="user.email" name="email">
-      </div>
-  
-  
 
     <button type="submit" class="btn btn-success">Submit</button>
   </form>
